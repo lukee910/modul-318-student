@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwissTransport.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace TransportUI
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var transport = new Transport();
+            var connections = transport.GetConnections("luzern", "sursee");
+            var temp = connections.ConnectionList[0].From.Delay;
         }
     }
 }
