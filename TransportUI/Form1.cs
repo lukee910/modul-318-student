@@ -21,8 +21,8 @@ namespace TransportUI
         private void button1_Click(object sender, EventArgs e)
         {
             var transport = new Transport();
-            var connections = transport.GetConnections("luzern", "sursee");
-            var temp = connections.ConnectionList[0].From.Delay;
+            var connections = transport.GetStations("Basel SBB");
+            MessageBox.Show("Test");
         }
     }
 }
